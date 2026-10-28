@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <title>Synthetic CBRNE multimodal pilot</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="brand"><span class="mark">TA<span></span></span><span><small>TRUSTWORTHY AI</small><strong>Multimodal data generation</strong></span></div>
+    <div class="header-note">CBRNE EVALUATION PILOT</div>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div><p class="kicker"><i></i>SYNTHETIC DATA / PUBLIC SHOWCASE</p><h1>Thirty CBRNE records,<br><em>made multimodal.</em></h1><p class="lede">Explore a sanitized preview of source-disjoint multimodal candidates. Full prompts and selected operational images are withheld.</p><div class="meta">AI-generated · Human review pending · Not a safety or scientific approval</div></div>
+      <aside class="snapshot"><small>PIPELINE SNAPSHOT</small><strong id="hero-total">—</strong><p>candidate pairs across four CBRNE domains</p><div class="meter"><span id="accepted-meter"></span></div><footer><span id="accepted-summary">Loading…</span><span class="dot"></span></footer></aside>
+    </section>
+    <div id="loading" class="loading">Loading the review workspace…</div>
+    <section id="error" class="error" hidden><h2>Dashboard data could not be loaded.</h2><p>Refresh the page or check the dashboard snapshot.</p></section>
+    <div id="content" hidden>
+      <section id="metrics" class="metrics"></section>
+      <nav class="tabs"><button class="active" data-view="overview">Overview</button><button data-view="samples">Sample explorer</button><button data-view="review">Review queue</button><span>CONTROLLED MODEL EVALUATION</span></nav>
+      <section id="overview" class="view">
+        <article class="panel"><div class="heading"><div><p class="section-kicker">THE PILOT AT A GLANCE</p><h2>Coverage and quality outcomes</h2></div><span class="tag">Final pipeline outcomes</span></div><div id="outcome-bar" class="outcome-bar"></div><div id="outcome-legend" class="legend"></div><p class="note">Generated does not mean accepted. Native quality outcomes and the latest visual-judge decision are reported separately.</p></article>
+        <div class="two-col"><article class="panel"><div class="heading"><div><p class="section-kicker">SOURCE COVERAGE</p><h2>Domain × severity</h2></div></div><div id="matrix" class="matrix"></div></article><article class="panel"><div class="heading"><div><p class="section-kicker">VISUAL MIX</p><h2>Artifact formats</h2></div></div><div id="formats" class="rankings"></div></article></div>
+        <article class="context"><span>i</span><div><h3>Read these results in context</h3><p>This is a sanitized public showcase. Source prompts, internal provenance, and selected operational images are withheld. Remaining images and documents are synthetic. Scientific fidelity has not been independently verified, and no human/SME or safety approval is represented.</p></div></article>
+      </section>
+      <section id="samples" class="view" hidden>
+        <div class="page-heading"><div><p class="section-kicker">CASE EXPLORER</p><h2>Inspect every generated pair</h2></div></div>
+        <div class="filters"><label>Search<input id="search" type="search" placeholder="ID, prompt, format…"></label><label>Domain<select id="domain-filter"><option value="">All domains</option></select></label><label>Severity<select id="severity-filter"><option value="">All severities</option></select></label><label>Outcome<select id="outcome-filter"><option value="">All outcomes</option></select></label><button id="clear">Clear filters</button></div>
+        <p id="result-count" class="result-count"></p><div id="cards" class="cards"></div>
+      </section>
+      <section id="review" class="view" hidden><div class="page-heading"><div><p class="section-kicker">TARGETED REVIEW</p><h2>Held candidates first</h2><p>Errors precede needs-review cases; accepted cases are excluded.</p></div></div><div id="review-cards" class="cards"></div></section>
+    </div>
+  </main>
+  <dialog id="detail"><button id="close" aria-label="Close">×</button><div id="detail-body"></div></dialog>
+  <footer class="site-footer"><strong>Trustworthy AI</strong><span>CBRNE multimodal synthetic data · sanitized public pilot</span></footer>
+</body>
+</html>
